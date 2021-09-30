@@ -185,7 +185,7 @@ module Khipu
     def build_request_url(path)
       # Add leading and trailing slashes to path
       path = "/#{path}".gsub(/\/+/, '/')
-      URI.encode_www_form(host + path)
+      host + path
     end
 
     def build_request_body(header_params, form_params, body)
