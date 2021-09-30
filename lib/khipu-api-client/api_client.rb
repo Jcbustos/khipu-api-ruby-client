@@ -34,7 +34,8 @@ module Khipu
     def call_api(http_method, path, opts = {})
       request = build_request(http_method, path, opts)
       response = request.run
-
+      p "response"
+      p response
       # record as last response
       @last_response = response
 
